@@ -1,12 +1,5 @@
-var feedbackString;
-
 module.exports = {
-    hooks: {
-      // called on each book & each language book
-      'init': function () {
-
-      }
-    },
+    hooks: {},
 
     blocks: {},
 
