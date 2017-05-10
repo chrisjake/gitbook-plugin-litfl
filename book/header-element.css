@@ -50,7 +50,7 @@
     margin-right: auto;
 }
 
-.header {
+.top-nav-header {
     position: fixed;
     left: 0px;
     top: 0px;
@@ -58,7 +58,7 @@
     background-color: #fff;
 }
 
-.navlink {
+.top-nav-navlink {
     padding-top: 25px;
     font-family: 'Lato', sans-serif;
     color: #a6b5bf;
@@ -68,31 +68,31 @@
     text-transform: uppercase;
 }
 
-.navlink:hover {
+.top-nav-navlink:hover {
     color: #000;
 }
 
-.navlink.w--current {
+.top-nav-navlink.w--current {
     color: #000;
     font-weight: 600;
 }
 
-.navlink.signup {
+.top-nav-navlink.signup {
     color: #693453;
     font-weight: 700;
 }
 
-.navlink.signup:hover {
+.top-nav-navlink.signup:hover {
     color: #48eea5;
 }
 
-.logo {
+.top-nav-logo {
     padding: 18px 0px;
     opacity: 0.86;
     color: #c23939;
 }
 
-.logo:hover {
+.top-nav-logo:hover {
     box-shadow: 0 0 6px 0 #fff;
     opacity: 0.74;
 }
