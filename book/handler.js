@@ -5,25 +5,23 @@ require(["gitbook", "jQuery"], function(gitbook, $) {
     });
 
     gitbook.events.bind("page.change", function(e) {
-      function createHeader() {
-        return '<div class="top-nav-header w-nav" data-animation="default" data-collapse="medium" data-doc-height="1" data-duration="200" data-no-scroll="1"> <div class="w-container"> <a class="brand w-nav-brand w--current" href="https://www.hypertrack.com" target="_blank"> <img class="top-nav-logo" src="https://d2u9qw9tas3lfc.cloudfront.net/bundle/assets/logo_00d361d11845cf724a6901140dee5e81.svg" width="140"> </a> <nav class="navmenu w-nav-menu" role="navigation"> <a class="top-nav-navlink w-nav-link" href="https://dashboard.hypertrack.com/demo" target="_blank" style="max-width: 940px;">demo</a> <a class="top-nav-navlink w-nav-link" href="https://www.hypertrack.com/pricing" style="max-width: 940px;" target="_blank">pricing</a> <a class="top-nav-navlink w-nav-link" href="https://docs.hypertrack.com" target="_blank" style="max-width: 940px;">docs</a> <a class="top-nav-navlink w-nav-link" href="https://www.hypertrack.com/tutorials/service-visit-tracking-android" style="max-width: 940px;" target="_blank">tutorials</a> <a class="top-nav-navlink w-nav-link" href="http://blog.hypertrack.com" target="_blank" style="max-width: 940px;">BLOG</a> <a class="top-nav-navlink w-nav-link" href="https://dashboard.hypertrack.com/login" style="max-width: 940px;" target="_blank">LOGIN</a> <a class="top-nav-navlink signup w-nav-link" href="https://dashboard.hypertrack.com/signup" style="max-width: 940px;" target="_blank">sign Up</a> </nav> </div> </div>';
+      function createHeader() { //Header to be added. Scripts included because lazy
+        return '<script>jQuery(function($) { $("#menu-icon").click(function() {  $(".nav-primary .nav-menu").slideToggle();  }); $(window).resize(function(){  $(".book-body").css("top", $("#menuwrap").outerHeight());  $(".book-summary").css("top", $("#menuwrap").outerHeight());  $(".book-header").css("top", $("#menuwrap").outerHeight()); if(window.innerWidth > 768) {            $(".nav-primary .nav-menu").removeAttr("style");  } else {  $(".book-body").css("top", "0px");   $(".book-summary").css("top", "0px");           $(".book-header").css("top", "0px");  } });  });</script> <script> var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; var d = new Date(); var n = month[d.getMonth()]; document.getElementById("currentdate").innerHTML = n + " " + d.getDate() + ", " + d.getFullYear(); </script> <nav class="nav-primary" itemscope="" itemtype="https://schema.org/SiteNavigationElement"><div class="wrap" id="menuwrap"><div id="menu-icon"></div><ul id="top-menu" class="nav-menu"><li id="menu-collections" class="menu-item"><a href="https://lifeinthefastlane.com/collections/" itemprop="url"><span itemprop="name">Collections</span></a></li><li id="menu-ecg" class="menu-item"><a href="https://lifeinthefastlane.com/ecg-library/" itemprop="url"><span itemprop="name">ECG Library</span></a></li><li id="menu-tox" class="menu-item"><a href="https://lifeinthefastlane.com/tox-library/" itemprop="url"><span itemprop="name">Tox Library</span></a></li><li id="menu-cases" class="menu-item"><a href="https://lifeinthefastlane.com/clinical-cases/" itemprop="url"><span itemprop="name">CASES</span></a><li id="menu-partone" class="menu-item"><a href="http://partonedotcc.s3-website-ap-southeast-2.amazonaws.com/" itemprop="url"><span itemprop="name">Part One</span></a></li></li><li id="menu-ccc" class="menu-item"><a href="https://lifeinthefastlane.com/ccc/" itemprop="url"><span itemprop="name">CCC</span></a></li><li id="menu-top100" class="menu-item"><a href="https://lifeinthefastlane.com/litfl-top-100/" itemprop="url"><span itemprop="name">Top 100</span></a></li><li class="date " id="currentdate">dategoeshere</li></ul></div></nav>';
       }
       // Get configuration.
       var headerTitle = 'NEW HEADER';
 
-      $('.book-body').css('top', '70px');
-      $('.book-summary').css('top', '70px');
-      $('.book-header').css({'top': '70px', 'border-top': '1px solid #ededed'});
+      $('.book-body').css('top', '64px');
+      $('.book-summary').css('top', '64px');
+      $('.book-header').css({'top': '64px', 'border-top': '1px solid #ededed'});
 
       // Add customize header html.
       var $header = $('<div class="custom-header"></div>');
       var $headerWrapper = $('<div class="header-element-wrapper"></div>');
       var $link = $(createHeader());
       $headerWrapper.append($link);
-      //var $headerTitle = $('<div class="header-text">' + headerTitle + '</div>');
-
-      //$headerWrapper.append($headerTitle);
       $header.append($headerWrapper);
-      $('.book-summary').before($header);
+      $('.book').before($header); //.book places header above summary and body elements and ensures these will be pushed down by dynamic headers
     });
 });
+
