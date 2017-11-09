@@ -1,19 +1,19 @@
 {
-  "name": "gitbook-plugin-top-nav",
-  "description": "HyperTrack top nav plugin for gitbook",
+  "name": "gitbook-plugin-litfl",
+  "description": "Life in the Fast Lane Gitbook Nav",
   "main": "index.js",
   "version": "0.1.7",
   "engines": {
     "gitbook": ">=2.5.1"
   },
-  "homepage": "https://github.com/hypertrack/gitbook-plugin-top-nav",
+  "homepage": "https://github.com/chrisjake/gitbook-plugin-litfl",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hypertrack/gitbook-plugin-top-nav"
+    "url": "https://github.com/chrisjake/gitbook-plugin-litfl"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hypertrack/gitbook-plugin-top-nav/issues"
+    "url": "https://github.com/chrisjake/gitbook-plugin-litfl/issues"
   },
   "gitbook": {
     "properties": {}

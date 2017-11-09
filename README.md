@@ -1,4 +1,3 @@
-# gitbook-plugin-top-nav
-Plugin for gitbook to add custom top navigation bar.
+# gitbook-plugin-litfl
+Plugin for gitbook to top nav for Life in the Fast Lane to Gitbook. Based on gitbook-plugin-top-nav.
 
-![Screenshot](top-nav-screenshot.png)
