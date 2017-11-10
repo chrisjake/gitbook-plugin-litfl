@@ -105,6 +105,7 @@ ul#top-menu {
   text-transform: none;
 }
 
+
 @media only screen and (max-width: 1139px) {
   .wrap {
     max-width: 960px;
