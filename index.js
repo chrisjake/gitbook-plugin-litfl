@@ -4,7 +4,9 @@ module.exports = {
     blocks: {},
 
     book: {
-        assets: "./book",
+        assets: [
+            "./book", "./fonts"
+        ],
         js: [
           "handler.js"
         ],
