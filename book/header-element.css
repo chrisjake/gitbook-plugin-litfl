@@ -57,11 +57,11 @@ ul#top-menu {
 }
 
 .nav-primary a:hover {
-  color: #469bd1;
+  color: #e8554e;
 }
 
 #menu-partone a {
-  color: #469bd1;
+  color: #e8554e;
 }
 
 
@@ -82,10 +82,11 @@ ul#top-menu {
 }
 
 #menu-icon {
-  line-height: 26px;
   cursor: pointer;
   display: none;
-  padding: 1rem 0;
+  padding: 1.6rem 0;
+  font-size:20px;
+  line-height: 20.2px;
 }
 
 #menu-icon::before {
@@ -121,9 +122,9 @@ ul#top-menu {
     max-width: 768px;
   }
   .nav-menu {
-    display: block;
     text-align: center;
   }
+
   li#currentdate {
     display: auto;
   }
@@ -131,6 +132,7 @@ ul#top-menu {
     position: relative;
   }
 }
+
 
 @media only screen and (max-width: 768px) {
   .nav-menu > .first > a {
@@ -146,5 +148,13 @@ ul#top-menu {
   .nav-primary #menu-icon {
     display: block;
     text-align: center;
+  }
+
+    .nav-menu .menu-item {
+    display: block;
+  }
+
+  .menu-item a {
+      padding: 15px 20px;
   }
 }
