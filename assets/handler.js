@@ -23,7 +23,7 @@ require(["gitbook", "jQuery"], function(gitbook, $) {
         $(".book-header").css("top", "0px");
         console.log('size else');
       }
-
+      
       // Add customised html to DOM
       if($('div.custom-header').length === 0) { //prevent multiples being added
         var $header = $('<div class="custom-header"></div>');
@@ -34,14 +34,8 @@ require(["gitbook", "jQuery"], function(gitbook, $) {
         $('.book').before($header); //.book places header above summary and body elements which ensures these will be pushed down by dynamic headers
       }
 
-      //Update date in nav header, runs on page load
-      var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      var d = new Date();
-      var n = month[d.getMonth()];
-      document.getElementById("currentdate").innerHTML = n + " " + d.getDate() + ", " + d.getFullYear();
-
-      console.log("Script working");
       MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
     });
 });
+
